@@ -41,13 +41,18 @@ public class LoadEventListener implements PostLoadEventListener {
             String cipher = Weaver.getContent(entity, field);
             if(cipher != null && !cipher.isEmpty()){
 
-                IEncryptionHandler handler = Weaver.decideEncryptionHandler(field);
+                if(cipher.length() > 15){
+                    cipher = cipher.substring(15);
+                    IEncryptionHandler handler = Weaver.decideEncryptionHandler(field);
 
-                if(handler != null){
-                    String decrypted = handler.decrypt(cipher);
-                    if(decrypted != null){
-                        Weaver.setContent(entity, field, decrypted);
+                    if(handler != null){
+                        String decrypted = handler.decrypt(cipher);
+                        if(decrypted != null){
+                            Weaver.setContent(entity, field, decrypted);
+                        }
                     }
+                }else if(cipher.length() == 15){
+                    Weaver.setContent(entity, field, "");
                 }
             }
 
