@@ -35,8 +35,6 @@ public class EventListenerIntegrator {
 
     /**
      * Obtains EventListener beans and registers them to the listener registry
-     *
-     * @author Mekuanent Kassaye
      */
     @PostConstruct
     public void registerListeners() {
@@ -63,10 +61,9 @@ public class EventListenerIntegrator {
             log.debug("Registering: {}", hel.getClass());
 
             PreInsertEventListener.class.isAssignableFrom(hel.getClass());
-//            listenerRegistry.appendListeners(EventType.PRE_INSERT,
-//                    (PreInsertEventListener) hel);
-            listenerRegistry.appendListeners(EventType.PRE_COLLECTION_UPDATE,
-                    (PreCollectionUpdateEventListener) hel);
+
+            listenerRegistry.appendListeners(EventType.FLUSH_ENTITY,
+                    InsertEventListener.class);
         }
     }
 }
