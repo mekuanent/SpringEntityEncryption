@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Field;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 
@@ -42,14 +41,14 @@ public class InsertEventListener implements
             String text = Weaver.getContent(entity, field);
             if(text != null && !text.isEmpty()){
 
-                if(text.contains("\\@{encrypted}@//")) result.set(false);
+                if(text.contains("\\@{encrypted}@/")) result.set(false);
 
                 IEncryptionHandler handler = Weaver.decideEncryptionHandler(field);
 
                 if(handler != null){
                     String cipher = handler.encrypt(text);
                     if(cipher != null){
-                        Weaver.setContent(entity, field, "\\@{encrypted}@//"+cipher);
+                        Weaver.setContent(entity, field, "\\@{encrypted}@/"+cipher);
                     }
                 }
             }
@@ -58,8 +57,6 @@ public class InsertEventListener implements
         return result.get();
     }
 
-
-    private static boolean flushed = false;
 
     /**
      * triggered Just before an entity is inserted, invoking the com.mekuanent.encryption algorithm on annotated fields
