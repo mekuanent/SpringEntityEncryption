@@ -1,7 +1,7 @@
-package com.mekuanent.encryption.annotation;
+package com.github.mekuanent.encryption.annotation;
 
-import com.mekuanent.encryption.handler.GenericHandler;
-import com.mekuanent.encryption.handler.IEncryptionHandler;
+import com.github.mekuanent.encryption.handler.GenericHandler;
+import com.github.mekuanent.encryption.handler.IEncryptionHandler;
 
 import java.lang.annotation.*;
 

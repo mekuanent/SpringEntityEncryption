@@ -1,7 +1,7 @@
-package com.mekuanent.encryption.registry;
+package com.github.mekuanent.encryption.registry;
 
-import com.mekuanent.encryption.listener.InsertEventListener;
-import com.mekuanent.encryption.listener.LoadEventListener;
+import com.github.mekuanent.encryption.listener.InsertEventListener;
+import com.github.mekuanent.encryption.listener.LoadEventListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

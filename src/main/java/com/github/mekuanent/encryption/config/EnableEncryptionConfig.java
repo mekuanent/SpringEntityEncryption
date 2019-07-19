@@ -1,4 +1,4 @@
-package com.mekuanent.encryption.config;
+package com.github.mekuanent.encryption.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Configuration;
  * @author Mekuanent Kassaye
  */
 @Configuration
-@ComponentScan(basePackages = {"com.mekuanent.encryption"})
+@ComponentScan(basePackages = {"com.github.mekuanent.encryption"})
 public class EnableEncryptionConfig {
 }

@@ -1,4 +1,4 @@
-package com.mekuanent.encryption.handler;
+package com.github.mekuanent.encryption.handler;
 
 /**
  * Interface for generic Encryption Handlers

@@ -1,8 +1,8 @@
-package com.mekuanent.encryption.integrator;
+package com.github.mekuanent.encryption.integrator;
 
-import com.mekuanent.encryption.listener.InsertEventListener;
-import com.mekuanent.encryption.listener.LoadEventListener;
-import com.mekuanent.encryption.registry.HibernateSpringIntegratorRegistry;
+import com.github.mekuanent.encryption.listener.InsertEventListener;
+import com.github.mekuanent.encryption.listener.LoadEventListener;
+import com.github.mekuanent.encryption.registry.HibernateSpringIntegratorRegistry;
 import org.hibernate.event.service.spi.EventListenerRegistry;
 import org.hibernate.event.spi.*;
 import org.hibernate.internal.SessionFactoryImpl;
@@ -43,7 +43,7 @@ public class EventListenerIntegrator {
         EventListenerRegistry listenerRegistry = ((SessionFactoryImpl) entityManagerFactory
                 .getSessionFactory()).getServiceRegistry().getService(
                 EventListenerRegistry.class);
-        List<LoadEventListener> loadEventListeners = hibernateSpringIntegratorRegistry
+        List<com.github.mekuanent.encryption.listener.LoadEventListener> loadEventListeners = hibernateSpringIntegratorRegistry
                 .getHibernateLoadEventListeners();
 
         List<InsertEventListener> insertEventListeners = hibernateSpringIntegratorRegistry

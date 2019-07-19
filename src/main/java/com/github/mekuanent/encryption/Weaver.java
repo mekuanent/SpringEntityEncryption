@@ -1,11 +1,11 @@
-package com.mekuanent.encryption;
+package com.github.mekuanent.encryption;
 
-import com.mekuanent.encryption.annotation.Encrypted;
-import com.mekuanent.encryption.exception.NoEncryptionHandlerDefined;
-import com.mekuanent.encryption.handler.EncryptionHandler;
-import com.mekuanent.encryption.handler.GenericHandler;
-import com.mekuanent.encryption.handler.IEncryptionHandler;
-import com.mekuanent.encryption.registry.ContextHelper;
+import com.github.mekuanent.encryption.annotation.Encrypted;
+import com.github.mekuanent.encryption.exception.NoEncryptionHandlerDefined;
+import com.github.mekuanent.encryption.handler.EncryptionHandler;
+import com.github.mekuanent.encryption.handler.IEncryptionHandler;
+import com.github.mekuanent.encryption.handler.GenericHandler;
+import com.github.mekuanent.encryption.registry.ContextHelper;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;

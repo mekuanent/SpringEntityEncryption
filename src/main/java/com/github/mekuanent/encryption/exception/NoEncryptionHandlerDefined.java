@@ -1,7 +1,9 @@
-package com.mekuanent.encryption.exception;
+package com.github.mekuanent.encryption.exception;
+
+import com.github.mekuanent.encryption.handler.IEncryptionHandler;
 
 /**
- * This exception is thrown when no {@link com.mekuanent.encryption.handler.IEncryptionHandler EncryptionHandler}
+ * This exception is thrown when no {@link IEncryptionHandler EncryptionHandler}
  * is found for the field which should be defined either globally or locally
  *
  * @author Mekuanent Kassaye

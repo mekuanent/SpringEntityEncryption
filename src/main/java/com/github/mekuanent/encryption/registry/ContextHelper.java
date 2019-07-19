@@ -1,4 +1,4 @@
-package com.mekuanent.encryption.registry;
+package com.github.mekuanent.encryption.registry;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

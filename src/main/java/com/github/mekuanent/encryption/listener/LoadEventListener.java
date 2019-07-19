@@ -1,8 +1,8 @@
-package com.mekuanent.encryption.listener;
+package com.github.mekuanent.encryption.listener;
 
-import com.mekuanent.encryption.Weaver;
-import com.mekuanent.encryption.annotation.Encrypted;
-import com.mekuanent.encryption.handler.IEncryptionHandler;
+import com.github.mekuanent.encryption.Weaver;
+import com.github.mekuanent.encryption.annotation.Encrypted;
+import com.github.mekuanent.encryption.handler.IEncryptionHandler;
 import org.hibernate.event.spi.PostLoadEvent;
 import org.hibernate.event.spi.PostLoadEventListener;
 import org.slf4j.Logger;

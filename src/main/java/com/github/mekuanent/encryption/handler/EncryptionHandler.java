@@ -1,4 +1,4 @@
-package com.mekuanent.encryption.handler;
+package com.github.mekuanent.encryption.handler;
 
 /**
  * A Utility class to set a global {@link IEncryptionHandler EncryptionHandler}
