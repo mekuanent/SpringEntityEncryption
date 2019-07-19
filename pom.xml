@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mekuanent.lib</groupId>
-    <artifactId>spring-hibernate-entity-encription</artifactId>
+    <artifactId>spring-hibernate-entity-encryption</artifactId>
     <version>0.9.3-RELEASE</version>
     <packaging>jar</packaging>
 
