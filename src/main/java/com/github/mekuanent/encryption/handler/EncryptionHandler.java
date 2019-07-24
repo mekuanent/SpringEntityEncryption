@@ -11,7 +11,7 @@ final public class EncryptionHandler {
 
     /**
      * Sets the global com.mekuanent.encryption handler
-     * @apiNote This can be overriden by specifying a local com.mekuanent.encryption handler to the field
+     * This can be overriden by specifying a local com.mekuanent.encryption handler to the field
      * @param handler must not be {@literal null}.
      */
     public static void set(IEncryptionHandler handler){

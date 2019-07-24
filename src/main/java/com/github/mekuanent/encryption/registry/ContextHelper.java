@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * Binds Easy access {@link ApplicationContext application context}
  * Source https://github.com/brunozambiazi/blog/tree/master/spring-application-context
- * @author @brunozambiazi
+ * @author brunozambiazi
  */
 @Component
 public class ContextHelper implements ApplicationContextAware {
