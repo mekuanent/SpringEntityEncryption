@@ -7,7 +7,7 @@ gives you the decrypted version when you need to read it.
 Here's the Loopback version of the library https://github.com/mekuanent/loopback-encryption-mixin
 
 
-##Installation
+## Installation
 
 For maven based projects
 
@@ -27,7 +27,7 @@ implementation 'com.github.mekuanent:spring-hibernate-entity-encryption:1.0.0'
 
 You can check out this url for other builds https://search.maven.org/artifact/com.github.mekuanent/spring-hibernate-entity-encryption/1.0.0/jar
 
-##Setup
+## Setup
 
 Add the following annotation to import the encryption configuration class.
 
@@ -59,7 +59,7 @@ private String title;
 
 **That's it, you're all set.**
 
-##Custom Encryption Algorithm
+## Custom Encryption Algorithm
 
 If you don't want to use the default encryption scheme. you can define your own by creating an ```@Component``` annotated class implementing ```IEncryptionHandler```
 
@@ -103,8 +103,8 @@ E.g.
 private String description;
 ```
 
-##Resources
+## Resources
 you can checkout the complete sample application here: https://github.com/mekuanent/SpringEntityEncryptionLibExample
 
-##License
+## License
 Spring Hibernate Entity Encryption is released under the terms of the Apache Software License Version 2.0 (see license.txt).
