@@ -2,3 +2,6 @@
 *.iml
 *.class
 SpringHibernateEntityEncryption.kotlin_module
+target
+.idea
+*.versionsBackup
