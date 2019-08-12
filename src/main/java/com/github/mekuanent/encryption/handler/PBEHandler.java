@@ -34,10 +34,11 @@ public class PBEHandler implements IEncryptionHandler {
     /**
      * Constructs PBEHandler with the following parameters
      * @param password choose a strong key for a better com.mekuanent.encryption
-     * @param salt
-     * @param iv
+     * @param salt Salt for Encryption
+     * @param iv IV for encryption
+     * @param iteration the number of times the encryption has to iterated/layered
      */
-    public PBEHandler(@NotNull String password, @NotNull String salt, @NotNull String iv,
+    public PBEHandler(@NotNull char[] password, @NotNull byte[] salt, @NotNull byte[] iv,
                       int iteration) {
         this(password, salt, iv, iteration, 256);
     }
@@ -45,21 +46,22 @@ public class PBEHandler implements IEncryptionHandler {
     /**
      * Constructs PBEHandler with the following parameters
      * @param password choose a strong key for a better com.mekuanent.encryption
-     * @param salt
-     * @param iv
+     * @param salt salt for encryption
+     * @param iv IV for encryption
      * @param derivedKeyLength the length of the salt + password combination key, default is 256
+     * @param iteration the number of times the encryption has to iterated/layered
      */
-    public PBEHandler(@NotNull String password, @NotNull String salt, @NotNull String iv,
+    public PBEHandler(@NotNull char[] password, @NotNull byte[] salt, @NotNull byte[] iv,
                       int iteration, int derivedKeyLength) {
 
         try{
-            KeySpec keySpec = new PBEKeySpec(password.toCharArray(), salt.getBytes(), iteration, derivedKeyLength * 8);
+            KeySpec keySpec = new PBEKeySpec(password, salt, iteration, derivedKeyLength * 8);
             SecretKeyFactory f = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
 
             SecretKey tmp = f.generateSecret(keySpec);
             secret = new SecretKeySpec(tmp.getEncoded(), "PBEWithHmacSHA512AndAES_128");
 
-            ivSpec = new PBEParameterSpec(iv.getBytes(), 4096, new IvParameterSpec(new byte[16]));
+            ivSpec = new PBEParameterSpec(iv, 4096, new IvParameterSpec(new byte[16]));
         } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
             e.printStackTrace();
             ex = e;
