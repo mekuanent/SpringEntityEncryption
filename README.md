@@ -1,4 +1,4 @@
-# Spring Hibernate Entity Encryption
+# Spring Entity Encryption
 
 This library will allow you to to easily store data in encrypted format.
 It will store the attributes of your choice encrypted in your database and 
