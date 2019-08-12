@@ -56,6 +56,7 @@ public class Weaver {
      * Sets the specified content on both private and non-private fields for the specified object
      * @param obj the object to do reflection on
      * @param field the field which has the value
+     * @param newText the new String value to be set on property
      * @return {@literal true} if it is successful, {@literal false} if not.
      */
     public static boolean setContent(Object obj, Field field, String newText){
